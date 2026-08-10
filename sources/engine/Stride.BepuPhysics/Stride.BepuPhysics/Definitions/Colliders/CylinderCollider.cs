@@ -6,6 +6,7 @@ using BepuPhysics.Collidables;
 using BepuUtilities.Memory;
 using Stride.BepuPhysics.Systems;
 using Stride.Core;
+using Stride.Core.Mathematics;
 using NRigidPose = BepuPhysics.RigidPose;
 
 namespace Stride.BepuPhysics.Definitions.Colliders;
@@ -44,7 +45,7 @@ public sealed class CylinderCollider : ColliderBase
         }
     }
 
-    internal override void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose)
+    internal override void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose, Vector3 scale)
     {
         builder.Add(new Cylinder(Radius, Length), localPose, Mass);
     }

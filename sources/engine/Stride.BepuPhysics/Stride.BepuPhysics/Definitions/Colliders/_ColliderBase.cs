@@ -74,6 +74,6 @@ public abstract class ColliderBase
         ((ICollider?)Container)?.Component?.TryUpdateFeatures();
     }
 
-    internal abstract void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose);
+    internal abstract void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose, Vector3 scale);
     internal abstract void OnDetach(BufferPool pool);
 }

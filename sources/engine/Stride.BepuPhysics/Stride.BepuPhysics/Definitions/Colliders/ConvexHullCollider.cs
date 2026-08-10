@@ -40,7 +40,7 @@ public sealed class ConvexHullCollider : ColliderBase
         }
     }
 
-    internal override void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose)
+    internal override void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose, Vector3 scale)
     {
         if (_convexes.TryGetValue(Hull, out _cache) == false)
         {

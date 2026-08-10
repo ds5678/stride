@@ -31,9 +31,9 @@ public sealed class BoxCollider : ColliderBase
         }
     }
 
-    internal override void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose)
+    internal override void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose, Vector3 scale)
     {
-        builder.Add(new Box(Size.X, Size.Y, Size.Z), localPose, Mass);
+        builder.Add(new Box(Size.X * scale.X, Size.Y * scale.Y, Size.Z * scale.Z), localPose, Mass);
     }
 
     internal override void OnDetach(BufferPool pool) { }

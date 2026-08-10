@@ -1,11 +1,11 @@
 // Copyright (c) .NET Foundation and Contributors (https://dotnetfoundation.org/ & https://stride3d.net)
 // Distributed under the MIT license. See the LICENSE.md file in the project root for more information.
 
-using BepuPhysics;
 using BepuPhysics.Collidables;
 using BepuUtilities.Memory;
 using Stride.BepuPhysics.Systems;
 using Stride.Core;
+using Stride.Core.Mathematics;
 using NRigidPose = BepuPhysics.RigidPose;
 
 namespace Stride.BepuPhysics.Definitions.Colliders;
@@ -29,7 +29,7 @@ public sealed class SphereCollider : ColliderBase
         }
     }
 
-    internal override void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose)
+    internal override void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose, Vector3 scale)
     {
         builder.Add(new Sphere(Radius), localPose, Mass);
     }

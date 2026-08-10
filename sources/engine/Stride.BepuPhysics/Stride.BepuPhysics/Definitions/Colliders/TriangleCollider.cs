@@ -59,9 +59,9 @@ public sealed class TriangleCollider : ColliderBase
         }
     }
 
-    internal override void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose)
+    internal override void AddToCompoundBuilder(ShapeCacheSystem shape, BufferPool pool, ref CompoundBuilder builder, NRigidPose localPose, Vector3 scale)
     {
-        builder.Add(new Triangle(A.ToNumeric(), B.ToNumeric(), C.ToNumeric()), localPose, Mass);
+        builder.Add(new Triangle((A * scale).ToNumeric(), (B * scale).ToNumeric(), (C * scale).ToNumeric()), localPose, Mass);
     }
 
     internal override void OnDetach(BufferPool pool){ }

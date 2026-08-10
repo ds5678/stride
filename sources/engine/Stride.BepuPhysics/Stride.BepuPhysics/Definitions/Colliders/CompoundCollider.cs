@@ -75,16 +75,21 @@ public sealed class CompoundCollider : ICollider
             return false;
         }
 
+        Debug.Assert(_component is not null);
+
+        _component.Entity.Transform.UpdateWorldMatrix();
+        var scale = ShapeCacheSystem.GetClosestToDecomposableScale(_component.Entity.Transform.WorldMatrix);
+
         var compoundBuilder = new CompoundBuilder(pool, shapes, _colliders.Count);
         try
         {
             foreach (var collider in _colliders)
             {
-                var localTranslation = collider.PositionLocal;
+                var localTranslation = collider.PositionLocal * scale;
                 var localRotation = collider.RotationLocal;
 
                 var compoundChildLocalPose = new NRigidPose(localTranslation.ToNumeric(), localRotation.ToNumeric());
-                collider.AddToCompoundBuilder(shapeCache, pool, ref compoundBuilder, compoundChildLocalPose);
+                collider.AddToCompoundBuilder(shapeCache, pool, ref compoundBuilder, compoundChildLocalPose, scale);
             }
 
             Buffer<CompoundChild> compoundChildren;
