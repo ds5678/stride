@@ -26,11 +26,14 @@
     <StridePlatform Condition=" '$(RuntimeIdentifier.StartsWith(win))' ">Windows</StridePlatform>
     <StridePlatform Condition=" '$(RuntimeIdentifier.StartsWith(osx))' ">macOS</StridePlatform>
     <StridePlatform Condition=" '$(RuntimeIdentifier.StartsWith(linux))' ">Linux</StridePlatform>
+    <StridePlatform Condition=" '$(RuntimeIdentifier.StartsWith('android'))">Android</StridePlatform>
+    <StridePlatform Condition=" '$(RuntimeIdentifier.StartsWith('ios'))">iOS</StridePlatform>
     <StridePlatform Condition=" '$(StrideTargetFramework)' == '$(StrideFrameworkWindows)' ">Windows</StridePlatform>
     <StridePlatform Condition=" '$(StrideTargetFramework)' == '$(StrideFrameworkmacOS)' ">macOS</StridePlatform>
     <StridePlatform Condition=" '$(StrideTargetFramework)' == '$(StrideFrameworkUWP)' ">UWP</StridePlatform>
     <StridePlatform Condition=" '$(StrideTargetFramework)' == '$(StrideFrameworkAndroid)' ">Android</StridePlatform>
     <StridePlatform Condition=" '$(StrideTargetFramework)' == '$(StrideFrameworkiOS)' ">iOS</StridePlatform>
+    <StridePlatform Condition=" '$(StridePlatform)' == '' And '$([MSBuild]::IsOSPlatform(Windows))' ">Windows</StridePlatform>
     <StridePlatform Condition=" '$(StridePlatform)' == '' And '$([MSBuild]::IsOSPlatform(Linux))' ">Linux</StridePlatform>
     <StridePlatform Condition=" '$(StridePlatform)' == '' And '$([MSBuild]::IsOSPlatform(OSX))' ">macOS</StridePlatform>
     <StridePlatform Condition=" '$(StridePlatform)' == '' ">Windows</StridePlatform>
