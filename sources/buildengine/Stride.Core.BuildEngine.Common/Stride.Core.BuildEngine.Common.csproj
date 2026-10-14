@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <RootNamespace>Stride.Core.BuildEngine</RootNamespace>
     <StrideAssemblyProcessor>true</StrideAssemblyProcessor>
-    <StrideAssemblyProcessorOptions>--auto-module-initializer --serialization</StrideAssemblyProcessorOptions>
+    <StrideAssemblyProcessorOptions>--serialization</StrideAssemblyProcessorOptions>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ServiceWire" />

@@ -32,12 +32,9 @@ public class AssemblyProcessorApp
         References = [];
         ReferencesToAdd = [];
         MemoryReferences = [];
-        ModuleInitializer = true;
     }
 
     public bool ParameterKey { get; set; }
-
-    public bool ModuleInitializer { get; set; }
 
     public bool SerializationAssembly { get; set; }
 

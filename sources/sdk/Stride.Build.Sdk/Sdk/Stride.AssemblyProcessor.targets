@@ -25,7 +25,7 @@
     <StrideAssemblyProcessor Condition="'$(StrideAssemblyProcessor)' == ''">false</StrideAssemblyProcessor>
 
     <!-- Default options: parameter key + module initializers + serialization -->
-    <StrideAssemblyProcessorOptions Condition="'$(StrideAssemblyProcessorOptions)' == ''">--parameter-key --auto-module-initializer --serialization</StrideAssemblyProcessorOptions>
+    <StrideAssemblyProcessorOptions Condition="'$(StrideAssemblyProcessorOptions)' == ''">--parameter-key --serialization</StrideAssemblyProcessorOptions>
   </PropertyGroup>
 
   <!-- ================================================================ -->

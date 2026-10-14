@@ -6,7 +6,7 @@
     <TargetFramework>$(StrideEditorTargetFramework)</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <StrideAssemblyProcessor>true</StrideAssemblyProcessor>
-    <StrideAssemblyProcessorOptions>--parameter-key --auto-module-initializer --serialization</StrideAssemblyProcessorOptions>
+    <StrideAssemblyProcessorOptions>--parameter-key --serialization</StrideAssemblyProcessorOptions>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Mono.Options" />

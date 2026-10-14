@@ -391,7 +391,7 @@ Stride.Build.Sdk/Sdk/Sdk.targets (top)
 |----------|---------|--------|
 | `StrideRuntimeTargetFrameworks` | SDK-computed runtime TFM set; a runtime project sets `<TargetFrameworks>` to this (or the `…Windows`/`…MacOS` variant) | SDK (Stride.Platform.props) |
 | `StrideAssemblyProcessor` | Enable IL post-processing (serialization, module init) | Project (.csproj) |
-| `StrideAssemblyProcessorOptions` | Processor flags (e.g., `--serialization --auto-module-initializer`) | Project (.csproj) |
+| `StrideAssemblyProcessorOptions` | Processor flags (e.g., `--serialization`) | Project (.csproj) |
 | `StrideCodeAnalysis` | Enable code analysis rules | Project (.csproj) |
 | `StrideCompileAssets` | Enable asset compilation | Project (.csproj) |
 | `StrideScript` | Project is a script assembly (auto-enables StrideAssemblyProcessor) | Project (.csproj) |
@@ -459,8 +459,8 @@ Common option combinations:
 
 | Project type | Options |
 |-------------|---------|
-| Engine library | `--parameter-key --auto-module-initializer --serialization` |
-| Core library | `--auto-module-initializer --serialization` |
+| Engine library | `--parameter-key --serialization` |
+| Core library | `--serialization` |
 
 ---
 

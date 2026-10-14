@@ -17,8 +17,6 @@
     <!-- NU5128: an app package intentionally has no lib/, but still declares its dependency closure. -->
     <NoWarn>$(NoWarn);NU5128</NoWarn>
     <ImplicitUsings>enable</ImplicitUsings>
-    <StrideAssemblyProcessor>true</StrideAssemblyProcessor>
-    <StrideAssemblyProcessorOptions>--auto-module-initializer</StrideAssemblyProcessorOptions>
     <StrideLocalized>true</StrideLocalized>
     <StrideNuGetResolverUI>true</StrideNuGetResolverUI>
     <StrideSTAThreadOnMain>true</StrideSTAThreadOnMain>

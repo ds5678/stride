@@ -17,7 +17,7 @@
     <RollForward>Major</RollForward>
     <TargetFrameworks Condition="$(StridePlatforms.Contains('Windows'))">$(StrideFrameworkWindows);$(TargetFrameworks)</TargetFrameworks>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-    <StrideAssemblyProcessorOptions>--auto-module-initializer --serialization</StrideAssemblyProcessorOptions>
+    <StrideAssemblyProcessorOptions>--serialization</StrideAssemblyProcessorOptions>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Mono.Options" />

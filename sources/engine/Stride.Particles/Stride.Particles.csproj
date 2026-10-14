@@ -4,7 +4,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <TargetFrameworks>$(StrideRuntimeTargetFrameworks)</TargetFrameworks>
     <StrideAssemblyProcessor>true</StrideAssemblyProcessor>
-    <StrideAssemblyProcessorOptions>--parameter-key --auto-module-initializer --serialization</StrideAssemblyProcessorOptions>
+    <StrideAssemblyProcessorOptions>--parameter-key --serialization</StrideAssemblyProcessorOptions>
     <StridePackAssets>true</StridePackAssets>
     <StrideContainsAssetTypes>true</StrideContainsAssetTypes>
   </PropertyGroup>
